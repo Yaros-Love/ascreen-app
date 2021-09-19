@@ -9,6 +9,7 @@ const MountainPoint = ({mountainPoint}) => {
           <source srcSet={mountainPoint.url}/>
           <img src={mountainPoint.url} alt="Mountain Icon" />
         </picture>
+        <button className="mountain-name">{mountainPoint.name}</button>
       </div>
     </React.Fragment>
   )
