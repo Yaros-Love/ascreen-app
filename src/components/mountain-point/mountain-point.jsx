@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './mountain-point.css';
 
-const MountainPoint = ({mountainPoint}) => {
+const MountainPoint = ({mountainPoint, buttonClickHandle}) => {
   return (
     <React.Fragment>
       <div className="mountain-point" style={{width: mountainPoint.styles.width, height: mountainPoint.styles.height, top: mountainPoint.styles.top, left: mountainPoint.styles.left}}>
@@ -9,7 +10,13 @@ const MountainPoint = ({mountainPoint}) => {
           <source srcSet={mountainPoint.url}/>
           <img src={mountainPoint.url} alt="Mountain Icon" />
         </picture>
-        <button className="mountain-name">{mountainPoint.name}</button>
+        <button 
+          className="mountain-name"
+          onClick={() => {
+            buttonClickHandle(mountainPoint.id);
+          }}>
+            <Link to={`/${mountainPoint.id}`}>{mountainPoint.name}</Link>
+        </button>
       </div>
     </React.Fragment>
   )
