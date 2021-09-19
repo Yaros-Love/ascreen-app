@@ -1,0 +1,1 @@
+export const MOUNTAINS_COUNT = 8;

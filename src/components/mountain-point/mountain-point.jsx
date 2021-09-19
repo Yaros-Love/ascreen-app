@@ -7,8 +7,8 @@ const MountainPoint = ({mountainPoint, buttonClickHandle}) => {
     <React.Fragment>
       <div className="mountain-point" style={{width: mountainPoint.styles.width, height: mountainPoint.styles.height, top: mountainPoint.styles.top, left: mountainPoint.styles.left}}>
         <picture>
-          <source srcSet={mountainPoint.url}/>
-          <img src={mountainPoint.url} alt="Mountain Icon" />
+          <source srcSet={mountainPoint.icon}/>
+          <img src={mountainPoint.icon} alt="Mountain Icon" />
         </picture>
         <button 
           className="mountain-name"
