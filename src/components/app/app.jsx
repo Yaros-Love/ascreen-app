@@ -1,28 +1,21 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React from 'react';
+import { Route, Switch } from "react-router-dom";
 import './app.css';
 import MainPage from '../main/main';
 import MountainPage from '../mountain-page/mountain-page';
-import {mountainsPoints} from '../../mocks/mocks';
+import { useSelector } from 'react-redux';
 
 const App = () => {
-  const [currentPoint, setCurrentPoint ] = useState({currentPoint: 0});
-
-  const buttonClickHandle = (id) => {
-    setCurrentPoint(id);
-  };
-
+  const mountains = useSelector((state) => state.mountainsList)
+  
   return (
-    <BrowserRouter>
       <Switch>
-        <Route path="/" exact>
-          <MainPage buttonClickHandle={buttonClickHandle}/>
+        <Route exact path="/">
+          <MainPage />
         </Route>
-        <Route path='/:id' exact>
-          <MountainPage currentMountain={mountainsPoints[currentPoint]}/>
-        </Route>
+        <Route exact path="/:id" render={(prop) => <MountainPage mountains={mountains} id={prop.match.params.id}/>} />
       </Switch>
-    </BrowserRouter>
   );
-}
+};
+
 export default App;

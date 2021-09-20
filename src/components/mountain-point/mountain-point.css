@@ -28,6 +28,11 @@
   cursor: pointer;
 }
 
+.mountain-name > a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .mountain-name:hover {
   -webkit-box-shadow: 0px 0px 8px 3px #c4d7dc;
   -moz-box-shadow: 0px 0px 8px 3px #c4d7dc;

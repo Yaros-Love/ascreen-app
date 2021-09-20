@@ -1,8 +1,12 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { ActionCreator } from '../../store/action';
 import './mountain-point.css';
 
-const MountainPoint = ({mountainPoint, buttonClickHandle}) => {
+const MountainPoint = ({mountainPoint}) => {
+  const dispatch = useDispatch();
+
   return (
     <React.Fragment>
       <div className="mountain-point" style={{width: mountainPoint.styles.width, height: mountainPoint.styles.height, top: mountainPoint.styles.top, left: mountainPoint.styles.left}}>
@@ -12,8 +16,9 @@ const MountainPoint = ({mountainPoint, buttonClickHandle}) => {
         </picture>
         <button 
           className="mountain-name"
-          onClick={() => {
-            buttonClickHandle(mountainPoint.id);
+          onClick={(event) => {
+            event.preventDefault();
+            dispatch(ActionCreator.setCurrentMountain(mountainPoint));
           }}>
             <Link to={`/${mountainPoint.id}`}>{mountainPoint.name}</Link>
         </button>

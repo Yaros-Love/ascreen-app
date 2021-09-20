@@ -8,12 +8,13 @@
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
   align-self: flex-end;
   flex-basis: 70%;
 
   margin-bottom: 67px;
+  padding: 0px 72px;
 }
 
 .arrow > img {

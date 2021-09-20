@@ -16,7 +16,7 @@ import mountainPicture6 from '../img/06mountain.png';
 import mountainPicture7 from '../img/07mountain.jpg';
 import mountainPicture8 from '../img/08mountain.jpg';
 
-export const mountainsPoints = [
+export const mountains = [
   {
     id: 0,
     name: 'Часначорр',
