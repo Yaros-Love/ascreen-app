@@ -9,13 +9,13 @@ const MountainPoint = ({mountainPoint}) => {
 
   return (
     <React.Fragment>
-      <div className="mountain-point" style={{width: mountainPoint.styles.width, height: mountainPoint.styles.height, top: mountainPoint.styles.top, left: mountainPoint.styles.left}}>
+      <div className='mountain-point' style={{width: mountainPoint.styles.width, height: mountainPoint.styles.height, top: mountainPoint.styles.top, left: mountainPoint.styles.left}}>
         <picture>
           <source srcSet={mountainPoint.icon}/>
-          <img src={mountainPoint.icon} alt="Mountain Icon" />
+          <img src={mountainPoint.icon} alt='Mountain Icon' />
         </picture>
         <button 
-          className="mountain-name"
+          className='mountain-name'
           onClick={(event) => {
             event.preventDefault();
             dispatch(ActionCreator.setCurrentMountain(mountainPoint));

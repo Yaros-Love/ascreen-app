@@ -1,5 +1,5 @@
 export const ActionType = {
-  SET_CURRENT_MOUNTAIN: `mountains/setCurrentMountain`
+  SET_CURRENT_MOUNTAIN: 'mountains/setCurrentMountain'
 };
 
 export const ActionCreator = {

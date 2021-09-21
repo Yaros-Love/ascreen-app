@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import App from './components/app/app';
 import './index.css';
 import { reducer } from './store/reducer';
-import browserHistory from './browser-history';
 
 const store = createStore(
   reducer,
@@ -19,5 +18,5 @@ ReactDOM.render(
       <App />
     </Router>
   </Provider>,
-  document.querySelector(`#root`)
+  document.querySelector('#root')
 );

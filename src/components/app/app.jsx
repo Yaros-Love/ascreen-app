@@ -1,6 +1,5 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
-import './app.css';
+import { Route, Switch } from 'react-router-dom';
 import MainPage from '../main/main';
 import MountainPage from '../mountain-page/mountain-page';
 import { useSelector } from 'react-redux';
@@ -10,10 +9,10 @@ const App = () => {
   
   return (
       <Switch>
-        <Route exact path="/">
+        <Route exact path='/'>
           <MainPage />
         </Route>
-        <Route exact path="/:id" render={(prop) => <MountainPage mountains={mountains} id={prop.match.params.id}/>} />
+        <Route exact path='/:id' render={(prop) => <MountainPage mountains={mountains} id={prop.match.params.id}/>} />
       </Switch>
   );
 };

@@ -11,10 +11,10 @@ const MainPage = () => {
   return (
     <React.Fragment>
       <main>
-        <div className="layer">
+        <div className='layer'>
           {mountainsList.map((mountain) => <MountainPoint mountainPoint={mountain} key={mountain.id}/>)}
           
-          <img className="landscape" src={landscapeLayer} alt="Landscape image" />
+          <img className='landscape' src={landscapeLayer} alt='Landscape image' />
         </div>
       </main>
     </React.Fragment>
