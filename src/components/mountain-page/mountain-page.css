@@ -65,6 +65,8 @@ article > h2 {
   text-align: justify;
 
   font-size: 16px;
+
+  scrollbar-width: thin;
 }
 
 .description::-webkit-scrollbar {
@@ -72,6 +74,8 @@ article > h2 {
   width: 7px;
   background-color:  #1C5681;;
   height: 200px;
+
+  -webkit-appearance: none;
 }
 
 .description::-webkit-scrollbar-thumb {
