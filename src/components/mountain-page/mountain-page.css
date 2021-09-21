@@ -24,6 +24,10 @@
 .pagination {
   display: flex;
   justify-content: space-between;
+
+  cursor: pointer;
+  border: none;
+  background: transparent;
 }
 
 .pagination > img {
@@ -67,13 +71,11 @@ article > h2 {
   height: 300px;
   width: 7px;
   background-color:  #1C5681;;
-  border-radius: 5px;
   height: 200px;
 }
 
 .description::-webkit-scrollbar-thumb {
   background: #87B0BA;
-  border-radius: 5px;
 }
 
 .mountains_pogination {
@@ -87,4 +89,19 @@ article > h2 {
 
 .mountains_pogination > img:last-child {
   margin-right: 0px;
+}
+
+.fullscrin-bttn {
+  background: transparent;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.full-width {
+  flex-basis: 100%;
 }
