@@ -10,9 +10,8 @@ import mountainIconFill from '../../img/mountain-icon_fill.png';
 import { MOUNTAINS_COUNT, PAGINATIONS_COUNT } from '../../const/const';
 import { Link } from 'react-router-dom';
 
-const MountainPage = ({mountains, id}) => {
+const MountainPage = ({mountains, id, setPagination, countPagination}) => {
   const [isFullscreen, setFullscreen] = useState(false);
-  const [countPagination, setPagination] = useState(0);
   const [currentMountainId, setNextMountain] = useState(Number(id));
 
   return (
@@ -24,8 +23,9 @@ const MountainPage = ({mountains, id}) => {
               <img src={arrowIcon} alt='arrow icon' />
             </Link>
           </div>
-          <button 
+          <Link 
           className='pagination'
+          to={`/${Number(id) < mountains.length - 1 ? Number(id) + 1 : 0}`}
           onClick={() => {
             setPagination((prevCount) => 
               countPagination === 2 ? 0 : (prevCount + 1)
@@ -38,7 +38,7 @@ const MountainPage = ({mountains, id}) => {
             {new Array(PAGINATIONS_COUNT).fill(1).map((_item, i) => (
               <img src={countPagination === i ? paginationIconEmpty : paginationIconFill} alt='pagination icon' key={i}/>
             ))}
-          </button>
+          </Link>
           <div>
             <button 
               className='fullscrin-bttn'
