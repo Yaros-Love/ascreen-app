@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Circe Regular';
+  src: url('./fonts/Circe-Regular.eot');
+  src: url('./fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/Circe-Regular.woff') format('woff'),
+  url('./fonts/Circe-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+
 /* Указываем box sizing */
 *,
 *::before,
@@ -35,6 +45,8 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+
+  font-family: 'Circe Regular';
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
