@@ -15,3 +15,6 @@ Prod - master branch
 
 *Link to build in Github Page:*
 https://yaros-love.github.io/ascreen-app/#/
+
+*With using:*
+Create-react-app (никогда больше!!), react-router-dom, redux, react-redux.
