@@ -10,7 +10,7 @@
 https://www.figma.com/file/aeLS3LL2VwAMBtN9o0mJjw/Hibini_toponymy-Copy?node-id=0%3A1»
 
 *Navigate:*
-Dev - main branch
+Dev - main branch;
 Prod - master branch
 
 *Link to build in Github Page:*
